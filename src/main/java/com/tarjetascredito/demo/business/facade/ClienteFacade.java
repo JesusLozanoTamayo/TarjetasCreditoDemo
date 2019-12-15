@@ -25,7 +25,7 @@ public class ClienteFacade {
 		return clienteModel;
 	}
 
-	public InfoTarjetaModel obtenerInfoTarjetaModel(InfoTarjetaDTO infoTarjetaDTO, Long idCliente) {
+	public InfoTarjetaModel obtenerInfoTarjetaModel(InfoTarjetaDTO infoTarjetaDTO, String idCliente) {
 		
 		InfoTarjetaModel infoTarjetaModel = new InfoTarjetaModel();
 		infoTarjetaModel.setId(infoTarjetaDTO.getId());

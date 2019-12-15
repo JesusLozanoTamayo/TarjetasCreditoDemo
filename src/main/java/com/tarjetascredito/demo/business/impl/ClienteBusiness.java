@@ -38,9 +38,9 @@ public class ClienteBusiness implements IClienteBusiness{
 		
 		ClienteFacade clienteFacade = new ClienteFacade();
 		ClienteResponse clienteResponse = new ClienteResponse();
-		ClienteModel clienteModel = clienteService.save(clienteFacade.obtenerClienteModel(clienteRequest.getCliente()));
+		ClienteModel clienteModel = clienteFacade.obtenerClienteModel(clienteRequest.getCliente());
 		clienteResponse.setCliente(clienteFacade.obtenerClienteDTO(clienteModel));
-		InfoTarjetaModel infoTarjetaModel = infoTarjetaService.save(clienteFacade.obtenerInfoTarjetaModel(clienteRequest.getInformacionTarjeta(), clienteModel.getId()));
+		InfoTarjetaModel infoTarjetaModel = infoTarjetaService.save(clienteFacade.obtenerInfoTarjetaModel(clienteRequest.getInformacionTarjeta(), clienteModel.getCedula()));
 		clienteResponse.setInformacionTarjeta(clienteFacade.obtenerInfoTarjetaDTO(infoTarjetaModel));
 		return clienteResponse;
 	}

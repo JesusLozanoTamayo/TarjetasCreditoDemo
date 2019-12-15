@@ -17,7 +17,7 @@ public class InfoTarjetaModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(name="id_cliente")
-	private Long idCliente;
+	private String idCliente;
 	@Column(name="monto_aprobado")
 	private float montoAprobado;
 	@Column(name="cvv")
@@ -43,10 +43,10 @@ public class InfoTarjetaModel {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getIdCliente() {
+	public String getIdCliente() {
 		return idCliente;
 	}
-	public void setIdCliente(Long idCliente) {
+	public void setIdCliente(String idCliente) {
 		this.idCliente = idCliente;
 	}
 	public float getMontoAprobado() {
